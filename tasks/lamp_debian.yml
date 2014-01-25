@@ -65,7 +65,7 @@
   when:  lamp.mysql.users is defined
 
 - name: PHP.ini for the world to see
-  action: template src=php.ini.j2 dest=/etc/php5/apache2/php.ini owner=root group=root mode=0755
+  action: template src=apache_php.ini.j2 dest=/etc/php5/apache2/php.ini owner=root group=root mode=0755
 
 - name: Configuration file for our site
   action: template src=001-mysite.j2 dest=/etc/apache2/sites-available/001-mysite
