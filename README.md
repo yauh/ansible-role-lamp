@@ -16,15 +16,11 @@ The variables that can be passed to this role and a brief description about them
 MySQL users and databases are created based on variables, just add all users, dbs, and privileges in the variables. However you cannot define hosts for the time being.
 
 	lamp:
-	# the admin email used by apache
-	  admin_email: mail@example.org
+	  admin_email: mail@example.org    # the admin email used by apache
 	  apache:
-	    # apache listens on
-	    port: 80
-		# html files go to
-	    root: /var/www/
-		# the following apache modules are activated
-	    modules:
+	    port: 80                       # port for apache sites to be served on
+	    root: /var/www/                # root directory for web sites
+	    modules:                       # list of apache modules to be installed
 	        - alias
 	        - auth_basic
 	        - autoindex
@@ -37,8 +33,7 @@ MySQL users and databases are created based on variables, just add all users, db
 	        - setenvif
 	        - status
 	        - vhost_alias
-	  # various options for PHP running inside apache (php.ini)
-	  php:
+	  php:                             # various options for PHP running inside apache (php.ini)
 	    php_version: 5
 	    max_execution_time: 30
 	    max_input_time: 60
@@ -50,10 +45,8 @@ MySQL users and databases are created based on variables, just add all users, db
 	    display_errors: Off
 	    error_reporting: E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
 	  mysql:
-	    # root password for mysql
-	    root_password: password
-	    # users and databases to be created
-		users:
+	    root_password: password         # root password for mysql
+		users:                          # users and databases to be created
 	        - name: ci
 	          password: password
 	          privs: "cidb.*:ALL"
