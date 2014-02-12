@@ -69,3 +69,12 @@
 
 - name: Configuration file for our site
   action: template src=001-mysite.j2 dest=/etc/apache2/sites-available/001-mysite
+
+- name: Grab PHP composer
+  get_url: url=https://getcomposer.org/installer dest=/tmp/installer
+  
+- name: Run the composer installer  
+  command: /usr/bin/php /tmp/installer
+
+- name: mv composer to /usr/local/bin/composer
+  command: mv composer.phar /usr/local/bin/composer
