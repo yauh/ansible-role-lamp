@@ -75,8 +75,11 @@ BSD
 Author Information
 ------------------
 
+This Ansible role is forked from https://github.com/yauh/role-lamp
 Stephan Hochhaus <stephan@yauh.de>
 
 [yauh.de](http://yauh.de)
+
+and Adapted for the needs of Music-Ant. Every change here will be also proposed as a Pullrequest, so you may want to use the official version, or push the Pullrequest you need.
 
 
