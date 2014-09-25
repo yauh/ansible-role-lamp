@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  author: "Stephan Hochhaus"
-  company: Freelance
+  author: "Alwin Mark"
+  company: Music-Ant
   license: BSD
   min_ansible_version: 1.4
   platforms:
@@ -17,4 +17,3 @@ galaxy_info:
    - web
    - database
 dependencies: []
-  
