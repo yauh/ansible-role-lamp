@@ -7,6 +7,9 @@
 - name: Set debconf vars
   action: raw sudo echo mysql-server mysql-server/root_password_again password {{ lamp.mysql.root_password }} | sudo /usr/bin/debconf-set-selections
 
+- name: Update apt cache
+  action: apt update_cache=yes cache_valid_time=3600
+
 - name: Install webstack and database
   action: apt pkg={{ item }} state=latest
   with_items:
